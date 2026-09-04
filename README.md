@@ -1,16 +1,293 @@
-<h1 align="center">BaLeX</h1><p align="center">
-  <strong>Android Client for Bale Bot Management</strong>
-</p><p align="center">
-  A lightweight Android client for managing and interacting with Bale bot accounts.
-</p><p align="center">
-  <a href="https://dev.bale.ai">
-    <img src="https://img.shields.io/badge/Bale-Bot%20API-6574AC?style=for-the-badge" alt="Bale Bot API">
-  </a>
-  <a href="https://www.android.com/">
-    <img src="https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android">
-  </a>
-  <img src="https://img.shields.io/badge/Java-Android%20SDK-orange?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
+<h1 align="center">BaLeX</h1>
+
+<p align="center">
+  <strong>کلاینت اندرویدی سبک و قدرتمند برای مدیریت ربات‌های بله</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android">
+  <img src="https://img.shields.io/badge/Language-Java-orange?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT">
+  <img src="https://img.shields.io/badge/Bale%20Bot%20API-6574AC?style=for-the-badge" alt="Bale Bot API">
+</p>
+
+<p align="center">
+  <a href="#-معرفی">معرفی</a> •
+  <a href="#-قابلیت‌ها">قابلیت‌ها</a> •
+  <a href="#-معماری">معماری</a> •
+  <a href="#-نصب">نصب</a> •
+  <a href="#-build-از-source">Build</a> •
+  <a href="#-امنیت">امنیت</a> •
+  <a href="#-roadmap">Roadmap</a>
+</p>
+
+---
+
+## معرفی
+
+**BaLeX** یک کلاینت مستقل و غیررسمی اندرویدی برای مدیریت و تعامل با ربات‌های پیام‌رسان **بله** است.
+
+این پروژه با هدف فراهم کردن یک محیط اختصاصی، سبک و کارآمد برای مدیریت ربات از طریق دستگاه اندروید توسعه داده شده است.
+
+### امکانات اصلی:
+- مشاهده و مدیریت گفتگوهای ربات
+- ارسال و دریافت پیام (تقریباً بلادرنگ)
+- پشتیبانی از Reply
+- ارسال تصویر، فایل و موقعیت مکانی
+- دریافت و دانلود فایل‌های رسانه‌ای
+- مشاهده اطلاعات ربات
+- سیستم لاگ‌گیری خطاها
+
+> **نکته مهم**: BaLeX یک پروژه مستقل و غیررسمی است و هیچ ارتباط، همکاری یا وابستگی رسمی با تیم توسعه‌دهنده پیام‌رسان بله ندارد.
+
+---
+
+## وضعیت پروژه
+
+| مورد              | وضعیت                  |
+|-------------------|------------------------|
+| نسخه              | `1.0.0`                |
+| وضعیت توسعه       | Active Development     |
+| پلتفرم            | Android                |
+| زبان              | Java                   |
+| Minimum SDK       | 21                     |
+| Target SDK        | 34                     |
+| API               | Bale Bot API           |
+| Network Layer     | `HttpURLConnection`    |
+| دریافت Update     | Long Polling           |
+| رابط کاربری       | Android Views / XML    |
+| لایسنس            | MIT                    |
+
+---
+
+## قابلیت‌ها
+
+### مدیریت ربات
+- ورود با Bot Token
+- اعتبارسنجی توکن از طریق `getMe`
+- نمایش نام، یوزرنیم و شناسه ربات
+- ذخیره امن اطلاعات مورد نیاز
+- خروج و پاک‌سازی کامل داده‌ها
+
+### مدیریت گفتگو
+- نمایش لیست گفتگوها (خصوصی و گروهی)
+- فیلتر گفتگوها
+- باز کردن گفتگوی اختصاصی
+- نمایش پیام‌های ارسالی و دریافتی
+- پشتیبانی کامل از Reply
+
+### پیام‌رسانی
+- ارسال پیام متنی
+- دریافت آپدیت‌ها با Long Polling
+- مدیریت وضعیت پیام‌ها
+
+### فایل و رسانه
+- ارسال تصویر و فایل
+- انتخاب فایل از دستگاه
+- دانلود فایل‌های رسانه‌ای
+- مدیریت فایل‌های دریافت‌شده
+
+### موقعیت مکانی
+- دریافت موقعیت دستگاه
+- ارسال Location به گفتگو
+
+### سیستم Logging
+- ثبت خطاهای برنامه و شبکه
+- ثبت اطلاعات مرتبط با API
+- کمک به دیباگ و رفع مشکلات
+
+> **نکته امنیتی**: لاگ‌ها هرگز شامل Bot Token یا اطلاعات حساس نیستند.
+
+---
+
+## معماری
+
+پروژه با **Java** و **Android SDK** نوشته شده و ساختار آن بر پایه Activityها، لایه API و کلاس‌های کمکی اختصاصی شکل گرفته است.
+
+### ساختار پروژه
+
+```
+BaLeX/
+├── src/
+│   └── 1.0Source/                  ← پروژه اصلی Gradle
+│       ├── app/
+│       │   ├── build.gradle
+│       │   ├── proguard-rules.pro
+│       │   └── src/main/
+│       │       ├── AndroidManifest.xml
+│       │       ├── java/ir/BaleX/
+│       │       │   ├── MainActivity.java
+│       │       │   ├── HomeActivity.java
+│       │       │   ├── BaleApi.java
+│       │       │   ├── PollingManager.java
+│       │       │   ├── StorageHelper.java
+│       │       │   ├── FileDownloader.java
+│       │       │   ├── FileUtil.java
+│       │       │   ├── ChatAdapter.java
+│       │       │   ├── MessageAdapter.java
+│       │       │   ├── LogHelper.java
+│       │       │   ├── ProfileCache.java
+│       │       │   ├── SketchwareUtil.java
+│       │       │   ├── ReplyState.java
+│       │       │   ├── PendingUpload.java
+│       │       │   ├── IncomingMessage.java
+│       │       │   └── ChatOpener.java
+│       │       └── res/
+│       ├── build.gradle
+│       ├── settings.gradle
+│       └── gradle.properties
+├── .gitignore
+├── README.md
+└── LICENSE
+```
+
+### اجزای اصلی
+
+| کلاس              | مسئولیت                              |
+|-------------------|--------------------------------------|
+| `MainActivity`    | صفحه ورود و دریافت Bot Token         |
+| `HomeActivity`    | صفحه اصلی و مدیریت گفتگوها           |
+| `BaleApi`         | ارتباط با Bale Bot API               |
+| `PollingManager`  | دریافت آپدیت‌های جدید                |
+| `StorageHelper`   | مدیریت داده‌های محلی                 |
+| `FileDownloader`  | دریافت فایل‌های رسانه‌ای             |
+| `MessageAdapter`  | نمایش پیام‌ها                        |
+| `ChatAdapter`     | نمایش لیست گفتگوها                   |
+| `LogHelper`       | ثبت و مدیریت لاگ‌ها                  |
+
+---
+
+## جریان عملکرد
+
+```
+User
+ │
+ ▼
+MainActivity
+ │ Bot Token
+ ▼
+BaleApi ──► getMe ──► Bale Bot API
+ │
+ ▼
+HomeActivity
+ ├── PollingManager ──► getUpdates ──► Bale Bot API
+ └── User Actions ───► BaleApi ──────► Bale Bot API
+ │
+ ▼
+Local Storage
+ │
+ ▼
+Chats / Messages
+```
+
+---
+
+## فناوری‌های استفاده‌شده
+
+| بخش                  | فناوری                      |
+|----------------------|-----------------------------|
+| زبان برنامه‌نویسی    | Java                        |
+| پلتفرم               | Android                     |
+| HTTP Client          | `HttpURLConnection`         |
+| دریافت پیام          | Long Polling                |
+| ذخیره‌سازی محلی      | SharedPreferences + JSON    |
+| رابط کاربری          | Android Views + XML         |
+| سیستم بیلد           | Gradle                      |
+
+---
+
+## نصب
+
+نسخه‌های قابل نصب از بخش **Releases** منتشر می‌شوند.
+
+1. وارد بخش [Releases](https://github.com/Omid-Kordei/BaLeX/releases) شوید
+2. آخرین نسخه را انتخاب کنید
+3. فایل APK را از بخش Assets دانلود کنید
+4. روی دستگاه اندروید نصب کنید
+
+> فقط APKهایی را نصب کنید که از منبع رسمی پروژه دریافت شده‌اند.
+
+---
+
+## استفاده
+
+1. **ورود** ← یک Bot Token معتبر وارد کنید  
+2. **اعتبارسنجی** ← توکن از طریق Bot API بررسی می‌شود  
+3. **دریافت اطلاعات** ← اطلاعات ربات دریافت و نمایش داده می‌شود  
+4. **مدیریت** ← گفتگوها را مشاهده کنید، پیام بفرستید، فایل ارسال کنید و ...
+
+### دریافت Bot Token
+مستندات رسمی: [https://dev.bale.ai](https://dev.bale.ai)
+
+---
+
+## Build از Source
+
+### پیش‌نیازها
+- Android Studio
+- JDK سازگار
+- Android SDK Platform 34
+
+### مراحل
+
+```bash
+git clone https://github.com/Omid-Kordei/BaLeX.git
+cd BaLeX/src/1.0Source
+```
+
+سپس پروژه را در Android Studio باز کنید و منتظر Gradle Sync بمانید.
+
+```bash
+# Linux / macOS
+./gradlew assembleDebug
+
+# Windows
+gradlew.bat assembleDebug
+```
+
+خروجی APK معمولاً در مسیر زیر قرار می‌گیرد:
+
+```
+app/build/outputs/apk/debug/
+```
+
+---
+
+## امنیت
+
+| موضوع              | وضعیت فعلی                                      | برنامه آینده                  |
+|--------------------|--------------------------------------------------|-------------------------------|
+| ذخیره‌سازی توکن    | SharedPreferences (بدون رمزنگاری)               | Android Keystore              |
+| ارتباط شبکه        | HTTPS                                            | Certificate Pinning           |
+| Cleartext Traffic  | غیرفعال در ارتباط اصلی                           | سخت‌گیرانه‌تر                 |
+
+> در نسخه فعلی، توکن به‌صورت رمزنگاری‌شده ذخیره نمی‌شود. در دستگاه‌های روت‌شده خطر استخراج وجود دارد.
+
+---
+
+## Roadmap
+
+- [ ] ذخیره‌سازی رمزنگاری‌شده توکن با Android Keystore
+- [ ] پشتیبانی از Webhook (اختیاری)
+- [ ] رابط کاربری مدرن‌تر با Material Design 3
+- [ ] پشتیبانی از Inline Keyboard پیشرفته
+- [ ] حالت تاریک (Dark Mode)
+- [ ] پشتیبانی از چندین ربات به‌صورت همزمان
+- [ ] بهبود عملکرد و کاهش مصرف باتری در Long Polling
+
+---
+
+## لایسنس
+
+این پروژه تحت لایسنس **MIT** منتشر شده است.
+
+---
+
+<p align="center">
+  ساخته‌شده با ❤️ برای جامعه توسعه‌دهندگان ایرانی
+</p>
+```  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
 </p><p align="center">
   <a href="#معرفی">معرفی</a> •
   <a href="#قابلیت‌ها">قابلیت‌ها</a> •
