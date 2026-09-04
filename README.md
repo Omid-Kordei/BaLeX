@@ -1,18 +1,117 @@
-BaLeX
-
 <p align="center">
   <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="110" height="110" alt="BaLeX Icon">
-</p><h1 align="center">BaLeX</h1><p align="center">
+</p>
+
+<h1 align="center">BaLeX</h1>
+
+<p align="center">
   <strong>Android Client for Bale Bot Management</strong>
-</p><p align="center">
+</p>
+
+<p align="center">
   A lightweight Android client for managing and interacting with Bale bot accounts.
-</p><p align="center">
+</p>
+
+<p align="center">
   <a href="https://dev.bale.ai">
     <img src="https://img.shields.io/badge/Bale-Bot%20API-6574AC?style=for-the-badge" alt="Bale Bot API">
   </a>
   <a href="https://github.com/">
     <img src="https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android">
   </a>
+  <img src="https://img.shields.io/badge/Java-Android%20SDK-orange?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
+</p>
+
+<p align="center">
+  <a href="#معرفی">معرفی</a> •
+  <a href="#قابلیت‌ها">قابلیت‌ها</a> •
+  <a href="#معماری">معماری</a> •
+  <a href="#نصب">نصب</a> •
+  <a href="#توسعه">توسعه</a> •
+  <a href="#امنیت">امنیت</a>
+</p>
+
+---
+
+## معرفی
+
+BaLeX یک کلاینت اندرویدی مستقل برای مدیریت و تعامل با ربات‌های پیام‌رسان بله (Bale) است.
+
+این برنامه با هدف ایجاد یک محیط اختصاصی و کاربردی برای مدیریت ربات از طریق تلفن همراه توسعه داده شده و امکاناتی مانند مشاهده گفتگوها، ارسال و دریافت پیام، مدیریت فایل‌ها، ارسال موقعیت مکانی، مشاهده اطلاعات ربات و ثبت رویدادهای برنامه را فراهم می‌کند.
+
+BaLeX برای ارتباط با ربات به سرور واسط اختصاصی نیاز ندارد و درخواست‌های مربوط به Bot API مستقیماً از دستگاه کاربر ارسال می‌شوند.
+
+> **توجه:** BaLeX یک پروژه مستقل و غیررسمی است و هیچ ارتباط رسمی با شرکت یا تیم توسعه‌دهنده پیام‌رسان بله ندارد.
+
+---
+
+## وضعیت پروژه
+
+| مورد              | وضعیت              |
+|-------------------|--------------------|
+| نسخه فعلی         | 1.0.0              |
+| وضعیت             | Stable             |
+| پلتفرم            | Android            |
+| زبان              | Java               |
+| Minimum SDK       | 21                 |
+| Target SDK        | 34                 |
+| ارتباط API        | Bale Bot API       |
+| Network Layer     | HttpURLConnection  |
+| دریافت پیام       | Long Polling       |
+| رابط کاربری       | Android Views      |
+| License           | MIT                |
+
+---
+
+## قابلیت‌ها
+
+### مدیریت ربات
+- ورود با Bot Token
+- اعتبارسنجی Token
+- دریافت اطلاعات ربات
+- نمایش نام، Username و شناسه ربات
+- ذخیره اطلاعات مورد نیاز حساب
+- خروج از حساب و پاک‌سازی اطلاعات ذخیره‌شده
+
+### مدیریت گفتگو
+- نمایش لیست گفتگوهای ربات
+- پشتیبانی از گفتگوهای خصوصی و گروهی
+- فیلتر گفتگوها
+- باز کردن صفحه اختصاصی هر گفتگو
+- نمایش پیام‌های دریافتی و ارسال‌شده
+- پاسخ مستقیم به پیام‌ها
+
+### پیام‌رسانی
+- ارسال پیام متنی
+- دریافت پیام‌های جدید
+- دریافت تقریباً بلادرنگ پیام‌ها
+- Reply به پیام‌ها
+- مدیریت وضعیت پیام‌ها
+
+### فایل و رسانه
+- ارسال تصویر
+- ارسال فایل
+- انتخاب فایل از حافظه دستگاه
+- دانلود فایل‌های رسانه‌ای
+- مدیریت فایل‌های دریافت‌شده
+
+### موقعیت مکانی
+- دریافت موقعیت مکانی از دستگاه
+- ارسال Location به گفتگو
+- استفاده از GPS در صورت نیاز
+
+### سیستم Log
+- ثبت خطاهای برنامه
+- ثبت خطاهای شبکه
+- نمایش اطلاعات مربوط به API
+- کمک به بررسی و رفع مشکلات
+
+---
+
+## معماری
+
+BaLeX با Java و Android SDK توسعه داده شده و ساختار آن بر پایه Activityها و کلاس‌های کمکی اختصاصی شکل گرفته است.  </a>
   <img src="https://img.shields.io/badge/Java-Android%20SDK-orange?style=for-the-badge&logo=java&logoColor=white" alt="Java">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
 </p><p align="center">
