@@ -1,65 +1,128 @@
 BaLeX
 
 <p align="center">
-  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="96" height="96" alt="BaLeX Icon" />
+  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="110" height="110" alt="BaLeX Icon">
+</p><h1 align="center">BaLeX</h1><p align="center">
+  <strong>Android Client for Bale Bot Management</strong>
 </p><p align="center">
-  یک کلاینت اندرویدی برای مدیریت و تعامل با ربات‌های پیام‌رسان بله
+  A lightweight Android client for managing and interacting with Bale bot accounts.
 </p><p align="center">
-  <a href="https://bale.ai">Bale</a>
+  <a href="https://dev.bale.ai">
+    <img src="https://img.shields.io/badge/Bale-Bot%20API-6574AC?style=for-the-badge" alt="Bale Bot API">
+  </a>
+  <a href="https://github.com/">
+    <img src="https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android">
+  </a>
+  <img src="https://img.shields.io/badge/Java-Android%20SDK-orange?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
 </p><p align="center">
-  <img alt="Platform" src="https://img.shields.io/badge/platform-Android-3ddc84?logo=android&logoColor=white">
-  <img alt="Min SDK" src="https://img.shields.io/badge/minSdk-21-blue">
-  <img alt="Target SDK" src="https://img.shields.io/badge/targetSdk-34-blue">
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
+  <a href="#معرفی">معرفی</a> •
+  <a href="#قابلیت‌ها">قابلیت‌ها</a> •
+  <a href="#معماری">معماری</a> •
+  <a href="#نصب">نصب</a> •
+  <a href="#توسعه">توسعه</a> •
+  <a href="#امنیت">امنیت</a>
 </p>---
 
 معرفی
 
-BaLeX یک اپلیکیشن اندرویدی برای مدیریت و تعامل مستقیم با ربات‌های پیام‌رسان بله است.
+BaLeX یک کلاینت اندرویدی مستقل برای مدیریت و تعامل با ربات‌های پیام‌رسان بله (Bale) است.
 
-این برنامه با هدف فراهم کردن یک محیط اختصاصی برای مدیریت ربات، مشاهده و مدیریت گفتگوها، ارسال و دریافت پیام، ارسال فایل و موقعیت مکانی و مشاهده اطلاعات و لاگ‌های مربوط به عملکرد برنامه توسعه داده شده است.
+این برنامه با هدف ایجاد یک محیط اختصاصی و کاربردی برای مدیریت ربات از طریق تلفن همراه توسعه داده شده است و امکاناتی مانند مشاهده گفتگوها، ارسال و دریافت پیام، مدیریت فایل‌ها، ارسال موقعیت مکانی، مشاهده اطلاعات ربات و ثبت رویدادهای برنامه را فراهم می‌کند.
 
-BaLeX برای انجام عملیات اصلی خود به سرور واسط اختصاصی نیاز ندارد و ارتباطات مربوط به ربات مستقیماً از طریق Bot API بله انجام می‌شود.
+BaLeX برای ارتباط با ربات به سرور واسط اختصاصی نیاز ندارد و درخواست‌های مربوط به Bot API مستقیماً از دستگاه کاربر ارسال می‌شوند.
 
-این پروژه به‌صورت مستقل توسعه داده شده و هیچ ارتباط رسمی با شرکت یا تیم توسعه‌دهنده پیام‌رسان بله ندارد.
+«BaLeX یک پروژه مستقل و غیررسمی است و هیچ ارتباط رسمی با شرکت یا تیم توسعه‌دهنده پیام‌رسان بله ندارد.»
+
+---
+
+وضعیت پروژه
+
+مورد| وضعیت
+نسخه فعلی| "1.0.0"
+وضعیت| Stable
+پلتفرم| Android
+زبان| Java
+Minimum SDK| 21
+Target SDK| 34
+ارتباط API| Bale Bot API
+Network Layer| HttpURLConnection
+دریافت پیام| Long Polling
+رابط کاربری| Android Views
+License| MIT
 
 ---
 
 قابلیت‌ها
 
-- ورود و مدیریت حساب ربات با استفاده از Bot Token
-- اعتبارسنجی توکن و دریافت اطلاعات ربات
-- نمایش گفتگوهای ربات
-- تفکیک گفتگوها بر اساس نوع
-- دریافت پیام‌های جدید
-- ارسال پیام
-- پاسخ به پیام‌ها
-- ارسال تصاویر و فایل‌ها
-- ارسال موقعیت مکانی
-- ذخیره‌سازی محلی اطلاعات مورد نیاز برنامه
-- نمایش اطلاعات پروفایل ربات
-- سیستم ثبت و نمایش Log
-- مدیریت وضعیت حساب
+مدیریت ربات
+
+- ورود با Bot Token
+- اعتبارسنجی Token
+- دریافت اطلاعات ربات
+- نمایش نام، Username و شناسه ربات
+- ذخیره اطلاعات مورد نیاز حساب
 - خروج از حساب و پاک‌سازی اطلاعات ذخیره‌شده
-- رابط کاربری سازگار با زبان فارسی و راست‌به‌چپ
-- پشتیبانی از Android
+
+مدیریت گفتگو
+
+- نمایش لیست گفتگوهای ربات
+- پشتیبانی از گفتگوهای خصوصی و گروهی
+- فیلتر گفتگوها
+- باز کردن صفحه اختصاصی هر گفتگو
+- نمایش پیام‌های دریافتی و ارسال‌شده
+- پاسخ مستقیم به پیام‌ها
+
+پیام‌رسانی
+
+- ارسال پیام متنی
+- دریافت پیام‌های جدید
+- دریافت تقریباً بلادرنگ پیام‌ها
+- Reply به پیام‌ها
+- مدیریت وضعیت پیام‌ها
+
+فایل و رسانه
+
+- ارسال تصویر
+- ارسال فایل
+- انتخاب فایل از حافظه دستگاه
+- دانلود فایل‌های رسانه‌ای
+- مدیریت فایل‌های دریافت‌شده
+
+موقعیت مکانی
+
+- دریافت موقعیت مکانی از دستگاه
+- ارسال Location به گفتگو
+- استفاده از GPS در صورت نیاز
+
+سیستم Log
+
+- ثبت خطاهای برنامه
+- ثبت خطاهای شبکه
+- نمایش اطلاعات مربوط به API
+- کمک به بررسی و رفع مشکلات
 
 ---
 
-معماری پروژه
+معماری
 
-BaLeX با Java و Android SDK توسعه داده شده و ساختار پروژه بر پایه Activityها و کلاس‌های کمکی اختصاصی شکل گرفته است.
+BaLeX با Java و Android SDK توسعه داده شده و ساختار آن بر پایه Activityها و کلاس‌های کمکی اختصاصی شکل گرفته است.
 
 BaLeX/
+│
 ├── app/
 │   ├── build.gradle
 │   ├── proguard-rules.pro
+│   │
 │   └── src/
 │       └── main/
+│           │
 │           ├── AndroidManifest.xml
+│           │
 │           ├── java/
 │           │   └── ir/
 │           │       └── BaleX/
+│           │           │
 │           │           ├── MainActivity.java
 │           │           ├── HomeActivity.java
 │           │           ├── BaleApi.java
@@ -77,64 +140,179 @@ BaLeX/
 │           │           ├── IncomingMessage.java
 │           │           ├── ChatOpener.java
 │           │           └── ...
+│           │
 │           └── res/
 │               ├── drawable/
 │               ├── layout/
 │               ├── mipmap-*/
 │               ├── values/
 │               └── ...
+│
 ├── build.gradle
 ├── settings.gradle
-└── gradle.properties
+├── gradle.properties
+└── README.md
 
 اجزای اصلی
 
-کلاس| وظیفه
+کلاس| مسئولیت
 "MainActivity"| صفحه ورود و دریافت Bot Token
-"HomeActivity"| رابط اصلی برنامه و مدیریت گفتگوها
-"BaleApi"| ارتباط با Bot API بله
-"PollingManager"| دریافت به‌روزرسانی‌ها و پیام‌های جدید
-"StorageHelper"| مدیریت داده‌های ذخیره‌شده محلی
-"FileDownloader"| مدیریت دریافت فایل‌ها
-"FileUtil"| ابزارهای مدیریت فایل
+"HomeActivity"| صفحه اصلی و مدیریت گفتگوها
+"BaleApi"| لایه ارتباط با Bale Bot API
+"PollingManager"| دریافت Updateهای جدید
+"StorageHelper"| مدیریت داده‌های محلی
+"FileDownloader"| دریافت فایل‌های رسانه‌ای
+"FileUtil"| عملیات مرتبط با فایل
 "ChatAdapter"| نمایش لیست گفتگوها
-"MessageAdapter"| نمایش پیام‌های داخل گفتگو
-"LogHelper"| ثبت و مدیریت Logها
-"ProfileCache"| نگهداری موقت اطلاعات پروفایل
-"SketchwareUtil"| توابع کمکی مورد استفاده رابط کاربری
+"MessageAdapter"| نمایش پیام‌های گفتگو
+"LogHelper"| ثبت و مدیریت Log
+"ProfileCache"| Cache اطلاعات پروفایل
+"SketchwareUtil"| توابع کمکی رابط کاربری
+"ReplyState"| مدیریت وضعیت Reply
+"PendingUpload"| مدیریت فایل‌های در انتظار ارسال
+"IncomingMessage"| مدل پیام‌های دریافتی
+"ChatOpener"| مدیریت باز کردن گفتگو
 
 ---
 
 جریان عملکرد
 
-فرآیند اصلی برنامه به شکل زیر انجام می‌شود:
+فرآیند اصلی BaLeX به شکل زیر انجام می‌شود:
 
-1. کاربر Bot Token را در "MainActivity" وارد می‌کند.
-2. برنامه با استفاده از API مربوطه، اعتبار توکن را بررسی می‌کند.
-3. در صورت معتبر بودن توکن، اطلاعات مورد نیاز برنامه ذخیره می‌شود.
-4. کاربر وارد "HomeActivity" می‌شود.
-5. "PollingManager" به‌صورت دوره‌ای یا با استفاده از Long Polling، به‌روزرسانی‌های جدید را دریافت می‌کند.
-6. پیام‌ها و اطلاعات مورد نیاز چت‌ها در حافظه محلی برنامه مدیریت می‌شوند.
-7. عملیات ارسال پیام، فایل و موقعیت مکانی از طریق "BaleApi" انجام می‌شود.
+User
+  |
+  v
+MainActivity
+  |
+  | Bot Token
+  v
+BaleApi
+  |
+  | getMe
+  v
+Bale Bot API
+  |
+  | Bot Information
+  v
+HomeActivity
+  |
+  +-------------------+
+  |                   |
+  v                   v
+PollingManager     User Actions
+  |                   |
+  | getUpdates        |
+  v                   v
+Bale Bot API       BaleApi
+  |                   |
+  +---------+---------+
+            |
+            v
+      Local Storage
+            |
+            v
+       Chat / Messages
 
 ---
 
 فناوری‌های استفاده‌شده
 
 بخش| فناوری
-زبان برنامه‌نویسی| Java
-پلتفرم| Android
+Programming Language| Java
+Platform| Android
 Minimum SDK| 21
 Target SDK| 34
-ارتباط شبکه| "HttpURLConnection"
 API| Bale Bot API
-دریافت پیام| Long Polling
-ذخیره‌سازی| "SharedPreferences" و فایل‌های محلی
-رابط کاربری| Android Views
-طراحی| Android XML
-کتابخانه‌های اصلی| AndroidX AppCompat و Material Components
+HTTP Client| "HttpURLConnection"
+Message Updates| Long Polling
+Local Storage| "SharedPreferences"
+Local Data| JSON / Internal Storage
+UI| Android Views
+Layout| XML
+UI Components| AndroidX AppCompat / Material Components
 
-BaLeX برای ارتباط شبکه از "HttpURLConnection" استفاده می‌کند و برای لایه ارتباطی خود به Retrofit یا OkHttp وابسته نیست.
+BaLeX برای ارتباط شبکه از "HttpURLConnection" استفاده می‌کند و در لایه شبکه به Retrofit یا OkHttp وابسته نیست.
+
+---
+
+نصب
+
+فایل APK نسخه‌های رسمی از طریق بخش Releases مخزن پروژه منتشر می‌شوند.
+
+برای نصب نسخه منتشرشده:
+
+1. وارد بخش Releases شوید.
+2. نسخه مورد نظر را انتخاب کنید.
+3. فایل APK را از بخش Assets دریافت کنید.
+4. APK را روی دستگاه Android نصب کنید.
+
+در صورتی که Android اجازه نصب از منبع مورد نظر را ندهد، باید مجوز نصب برنامه از آن منبع را در تنظیمات دستگاه فعال کنید.
+
+---
+
+استفاده
+
+پس از اجرای برنامه:
+
+مرحله اول
+
+Bot Token معتبر ربات خود را وارد کنید.
+
+مرحله دوم
+
+BaLeX Token را از طریق API بررسی می‌کند.
+
+مرحله سوم
+
+پس از تأیید Token، اطلاعات ربات دریافت شده و کاربر وارد محیط اصلی برنامه می‌شود.
+
+مرحله چهارم
+
+در محیط اصلی می‌توانید گفتگوهای ربات را مشاهده کرده و عملیات مختلف پیام‌رسانی و مدیریت را انجام دهید.
+
+---
+
+دریافت Bot Token
+
+برای استفاده از BaLeX به یک Bot Token معتبر نیاز دارید.
+
+مستندات Bot API:
+
+https://dev.bale.ai
+
+Token خود را محرمانه نگه دارید و از انتشار آن در Repository، Screenshot، Issue یا سایر مکان‌های عمومی خودداری کنید.
+
+---
+
+Build از Source
+
+پیش‌نیازها
+
+- Android Studio
+- JDK سازگار با نسخه Gradle پروژه
+- Android SDK
+- Android SDK Platform 34
+
+Clone
+
+git clone https://github.com/<username>/BaLeX.git
+cd BaLeX
+
+پروژه را در Android Studio باز کنید و منتظر بمانید Gradle Sync کامل شود.
+
+Build Debug
+
+Linux / macOS:
+
+./gradlew assembleDebug
+
+Windows:
+
+gradlew.bat assembleDebug
+
+خروجی APK در مسیر مشابه زیر قرار خواهد گرفت:
+
+app/build/outputs/apk/
 
 ---
 
@@ -142,61 +320,171 @@ BaLeX برای ارتباط شبکه از "HttpURLConnection" استفاده م�
 
 امنیت اطلاعات ربات یکی از بخش‌های مهم استفاده از BaLeX است.
 
-ذخیره‌سازی Bot Token
+Bot Token
 
 در نسخه فعلی، Bot Token در "SharedPreferences" ذخیره می‌شود و به‌صورت رمزنگاری‌شده نگهداری نمی‌شود.
 
-بنابراین در دستگاه‌های Root شده یا شرایطی که دسترسی غیرمجاز به داده‌های برنامه وجود داشته باشد، امکان استخراج آن وجود دارد.
+بنابراین در دستگاه‌های Root شده یا شرایطی که دسترسی غیرمجاز به اطلاعات برنامه وجود داشته باشد، امکان استخراج Token وجود دارد.
 
-بهبود این بخش یکی از موارد قابل بررسی برای نسخه‌های آینده است.
+HTTPS
 
-ارتباط HTTPS
+ارتباطات اصلی BaLeX با API از HTTPS استفاده می‌کنند.
 
-ارتباطات اصلی برنامه با API بله از طریق HTTPS انجام می‌شوند.
+نسخه فعلی Certificate Pinning اختصاصی ندارد و امنیت اتصال بر TLS و سازوکارهای امنیتی سیستم Android متکی است.
 
-با این حال، نسخه فعلی از Certificate Pinning استفاده نمی‌کند و امنیت اتصال بر سازوکارهای استاندارد TLS و Android متکی است.
+Local Storage
 
-اطلاعات محلی
+اطلاعات مورد نیاز برنامه و برخی داده‌های مربوط به گفتگوها در حافظه داخلی برنامه ذخیره می‌شوند.
 
-برخی اطلاعات برنامه، از جمله داده‌های مربوط به گفتگوها و پیام‌ها، ممکن است در حافظه داخلی برنامه ذخیره شوند.
+حافظه داخلی Android به‌صورت پیش‌فرض برای سایر برنامه‌ها قابل دسترسی نیست، اما در دستگاه‌های Root شده یا شرایط خاص امکان دسترسی وجود دارد.
 
-حافظه داخلی Android به‌صورت پیش‌فرض برای سایر برنامه‌ها قابل دسترسی نیست، اما در دستگاه‌های Root شده یا شرایط خاص دسترسی به داده‌ها ممکن است امکان‌پذیر باشد.
+Cleartext Traffic
 
-Bot Token
+در صورت فعال بودن "usesCleartextTraffic" در Manifest، سیستم Android امکان ترافیک HTTP را نیز فراهم می‌کند.
 
-Bot Token را مانند یک اطلاعات محرمانه در نظر بگیرید.
+با توجه به اینکه ارتباط اصلی برنامه با API از HTTPS انجام می‌شود، این تنظیم می‌تواند در نسخه‌های آینده محدودتر شود.
 
-هر شخصی که به توکن ربات دسترسی داشته باشد، بسته به سطح دسترسی API، می‌تواند از طرف ربات عملیات مختلفی انجام دهد.
+مسئولیت Token
 
-Bot Token را در موارد زیر منتشر نکنید:
+Bot Token یک اطلاعات حساس محسوب می‌شود.
 
-- GitHub
-- Screenshots
-- Issues
-- Pull Requests
-- فایل‌های عمومی پروژه
-- کانال‌ها و گروه‌های عمومی
+در صورت افشای Token، فرد دیگری ممکن است بتواند از طرف ربات عملیات مجاز API را انجام دهد.
 
-در صورت افشای Token، آن را در سریع‌ترین زمان ممکن از طریق سازوکارهای مدیریت ربات در بله تغییر یا غیرفعال کنید.
+هرگز Token را در موارد زیر منتشر نکنید:
 
----
-
-دسترسی‌های برنامه
-
-BaLeX تنها برای قابلیت‌های مورد نیاز خود از دسترسی‌های Android استفاده می‌کند.
-
-دسترسی موقعیت مکانی برای قابلیت ارسال Location استفاده می‌شود و در صورت درخواست این قابلیت توسط کاربر مورد نیاز است.
+GitHub Repository
+GitHub Issues
+Pull Requests
+Screenshots
+Logs
+Public Groups
+Public Channels
 
 ---
 
-نصب
+توسعه‌های آینده
 
-فایل APK نسخه‌های منتشرشده در بخش Releases مخزن GitHub قرار می‌گیرد.
+توسعه BaLeX در نسخه‌های آینده می‌تواند در زمینه‌های زیر ادامه پیدا کند:
 
-برای نصب نسخه منتشرشده:
+قابلیت| وضعیت
+Multi-Bot| Planned
+Multi-Account| Planned
+Advanced Dashboard| Planned
+Advanced Logging| Planned
+Backup / Restore| Planned
+Improved File Management| Planned
+Improved Polling| Planned
+Token Encryption| Planned
+UI Improvements| Planned
+Performance Optimization| Planned
+Additional Administrative Tools| Planned
 
-1. وارد بخش Releases شوید.
-2. نسخه مورد نظر را انتخاب کنید.
+این فهرست ممکن است در طول توسعه پروژه تغییر کند.
+
+---
+
+مشارکت در توسعه
+
+مشارکت در توسعه BaLeX آزاد است.
+
+برای شروع:
+
+git clone https://github.com/<username>/BaLeX.git
+cd BaLeX
+
+یک Branch جدید ایجاد کنید:
+
+git checkout -b feature/my-feature
+
+پس از اعمال تغییرات:
+
+git add .
+git commit -m "Add my feature"
+git push origin feature/my-feature
+
+سپس یک Pull Request ایجاد کنید.
+
+برای تغییرات بزرگ، پیشنهاد می‌شود ابتدا یک Issue ایجاد شود تا درباره طراحی و نحوه پیاده‌سازی تغییر مورد نظر گفتگو شود.
+
+---
+
+گزارش مشکلات
+
+برای گزارش Bug یک Issue ایجاد کنید.
+
+اطلاعات پیشنهادی:
+
+اطلاعات| توضیح
+BaLeX Version| نسخه برنامه
+Android Version| نسخه Android
+Device| مدل دستگاه
+Description| توضیح مشکل
+Reproduction Steps| مراحل ایجاد مشکل
+Logs| Log مرتبط
+Screenshot| تصویر در صورت نیاز
+
+هرگز اطلاعات محرمانه مانند Bot Token، Session یا اطلاعات حساب را در Issue قرار ندهید.
+
+---
+
+GitHub
+
+پروژه BaLeX در GitHub توسعه و مدیریت می‌شود.
+
+برای دریافت آخرین نسخه، مشاهده Source Code، گزارش Bug و مشارکت در توسعه، به Repository پروژه مراجعه کنید.
+
+---
+
+License
+
+BaLeX تحت MIT License منتشر شده است.
+
+جزئیات کامل مجوز در فایل زیر قرار دارد:
+
+LICENSE
+
+استفاده، تغییر و توزیع پروژه مطابق شرایط MIT License مجاز است.
+
+---
+
+Disclaimer
+
+BaLeX یک پروژه مستقل و غیررسمی است.
+
+این پروژه هیچ ارتباط رسمی، همکاری رسمی یا وابستگی رسمی با شرکت یا تیم توسعه‌دهنده پیام‌رسان بله ندارد.
+
+BaLeX صرفاً از API ارائه‌شده توسط بله برای ارتباط با ربات‌ها استفاده می‌کند.
+
+کاربر مسئول حفاظت از Bot Token و اطلاعات حساب خود است.
+
+توسعه‌دهندگان BaLeX مسئولیتی در قبال استفاده نادرست از نرم‌افزار، افشای Token، از دست رفتن اطلاعات یا سوءاستفاده از حساب ربات نخواهند داشت.
+
+استفاده از BaLeX باید مطابق قوانین و شرایط استفاده از سرویس بله و API مربوطه انجام شود.
+
+---
+
+Project Information
+
+Property| Value
+Project| BaLeX
+Platform| Android
+Language| Java
+API| Bale Bot API
+Min SDK| 21
+Target SDK| 34
+License| MIT
+Current Version| "1.0.0"
+Status| Active Development
+
+---
+
+<p align="center">
+  <strong>BaLeX</strong>
+</p><p align="center">
+  Independent Android Client for Bale Bot Management
+</p><p align="center">
+  Developed for Android and the open-source community.
+</p>2. نسخه مورد نظر را انتخاب کنید.
 3. فایل APK را دریافت کنید.
 4. APK را روی دستگاه Android نصب کنید.
 
