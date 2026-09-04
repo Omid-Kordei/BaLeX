@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="110" height="110" alt="BaLeX Icon">
-</p>
+
 
 <h1 align="center">BaLeX</h1>
 
