@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F5F0">
+
+    <!-- هدر سبز -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_settings_header"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="چت‌ها"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <ImageView
+                android:id="@+id/btnSearch"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/ic_search"
+                android:padding="7dp"
+                android:alpha="0.9"/>
+
+        </LinearLayout>
+
+        <!-- باکس جستجو -->
+        <LinearLayout
+            android:id="@+id/layoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_glass_card"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="جستجو..."
+                android:textSize="13sp"
+                android:textColor="#1A1A1A"
+                android:textColorHint="#AAAAAA"
+                android:inputType="text"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- تب‌های همه/پیوی/گروه -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <LinearLayout
+            android:id="@+id/tabAll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/bg_footer_active">
+            <TextView
+                android:id="@+id/txtTabAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="همه"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#00C853"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabPrivate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/txtTabPrivate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="پیوی"
+                android:textSize="13sp"
+                android:textColor="#888888"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabGroup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/txtTabGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="گروه"
+                android:textSize="13sp"
+                android:textColor="#888888"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- لیست -->
+    <ListView
+        android:id="@+id/listChats"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#E8F0E8"
+        android:dividerHeight="1dp"
+        android:scrollbars="none"
+        android:background="#FFFFFF"
+        android:visibility="gone"/>
+
+    <!-- وضعیت خالی -->
+    <LinearLayout
+        android:id="@+id/layoutEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:background="@drawable/bg_avatar_circle_chat">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_chat"
+                android:alpha="0.9"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="هنوز چتی وجود ندارد"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:text="کاربران با ارسال پیام به ربات اینجا نمایش داده می‌شوند"
+            android:textSize="13sp"
+            android:textColor="#AAAAAA"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

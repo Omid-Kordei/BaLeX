@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="right"
+    android:paddingLeft="60dp"
+    android:paddingRight="12dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <LinearLayout
+        android:id="@+id/mediaCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_bubble_received"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        android:minWidth="160dp"
+        android:maxWidth="220dp">
+
+        <!-- آیکون + نوع فایل -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imgMediaIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_document"
+                android:layout_marginRight="8dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtMediaName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="فایل"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+
+                <TextView
+                    android:id="@+id/txtMediaSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ضربه بزن برای دانلود"
+                    android:textSize="11sp"
+                    android:textColor="#00922C"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- کپشن: بخش جداگانه، فقط اگر کپشن وجود داشته باشد -->
+        <TextView
+            android:id="@+id/txtMediaCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text=""
+            android:textSize="13sp"
+            android:textColor="#1A1A1A"
+            android:visibility="gone"/>
+
+        <!-- زمان -->
+        <TextView
+            android:id="@+id/txtMediaTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="6dp"
+            android:text="12:30"
+            android:textSize="10sp"
+            android:textColor="#AAAAAA"/>
+
+    </LinearLayout>
+
+</LinearLayout>

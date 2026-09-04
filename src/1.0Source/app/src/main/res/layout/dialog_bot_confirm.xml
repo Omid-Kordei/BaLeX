@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_glass_card">
+
+    <!-- هدر سبز -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog_header">
+
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@drawable/ic_bot_wrench"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="ربات تأیید شد"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+    <!-- اطلاعات -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:id="@+id/dialogBotName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"/>
+
+        <TextView
+            android:id="@+id/dialogBotUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@..."
+            android:textSize="14sp"
+            android:textColor="#00922C"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="10dp"
+            android:background="#12000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="آیدی ربات"
+                android:textSize="12sp"
+                android:textColor="#88777777"/>
+
+            <TextView
+                android:id="@+id/dialogBotId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#333333"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- دکمه‌ها -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="16dp">
+
+        <!-- دکمه بازگشت — TextView بجا Button -->
+        <TextView
+            android:id="@+id/dialogBtnBack"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:layout_marginRight="6dp"
+            android:text="بازگشت"
+            android:textSize="13sp"
+            android:textColor="#888888"
+            android:gravity="center"
+            android:background="@drawable/bg_token_field"/>
+
+        <!-- دکمه ورود -->
+        <TextView
+            android:id="@+id/dialogBtnConfirm"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:text="ورود"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:background="@drawable/btn_login"/>
+
+    </LinearLayout>
+
+</LinearLayout>

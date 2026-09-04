@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F5F0"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- هدر پروفایل -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_settings_header"
+            android:paddingTop="32dp"
+            android:paddingBottom="28dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+            <FrameLayout
+                android:layout_width="84dp"
+                android:layout_height="84dp">
+
+                <LinearLayout
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_avatar_circle_chat">
+
+                    <TextView
+                        android:id="@+id/txtAvatarLetter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txtProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="نام ربات"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txtProfileUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@username"
+                android:textSize="14sp"
+                android:textColor="#CCFFFFFF"/>
+
+            <TextView
+                android:id="@+id/txtProfileId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="ID: ..."
+                android:textSize="12sp"
+                android:textColor="#AAFFFFFF"/>
+
+        </LinearLayout>
+
+        <!-- اکانت -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="6dp"
+            android:text="اکانت"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#009A3C"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/bg_settings_group">
+
+            <!-- توکن — قابل کپی -->
+            <LinearLayout
+                android:id="@+id/rowToken"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="توکن"
+                    android:textSize="14sp"
+                    android:textColor="#333333"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="کپی ••••••"
+                    android:textSize="13sp"
+                    android:textColor="#00922C"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="#F0F0F0"/>
+
+            <!-- خروج -->
+            <LinearLayout
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="خروج از حساب"
+                    android:textSize="14sp"
+                    android:textColor="#FF3B30"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_arrow_left"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- عیب‌یابی -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="6dp"
+            android:text="عیب‌یابی"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#009A3C"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/bg_settings_group">
+
+            <LinearLayout
+                android:id="@+id/btnLogs"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_log"
+                    android:layout_marginRight="14dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="لاگ خطاها"
+                    android:textSize="14sp"
+                    android:textColor="#333333"/>
+
+                <TextView
+                    android:id="@+id/txtLogCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="۰ خطا"
+                    android:textSize="12sp"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginRight="8dp"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_arrow_left"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- درباره -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="6dp"
+            android:text="درباره"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#009A3C"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/bg_settings_group">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="نسخه برنامه"
+                    android:textSize="14sp"
+                    android:textColor="#333333"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="v1.0.0"
+                    android:textSize="13sp"
+                    android:textColor="#AAAAAA"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="24dp"
+            android:text="BaLeX — Unofficial Bale Bot Manager"
+            android:textSize="11sp"
+            android:textColor="#BBBBBB"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</ScrollView>

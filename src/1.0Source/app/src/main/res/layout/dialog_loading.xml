@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_glass_card"
+    android:paddingTop="28dp"
+    android:paddingBottom="24dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+    <!-- اسپینر سبز -->
+    <ProgressBar
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:indeterminateTint="#00C853"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="در حال بررسی توکن..."
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A1A"
+        android:gravity="center"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="لطفاً صبر کنید"
+        android:textSize="12sp"
+        android:textColor="#88777777"
+        android:gravity="center"/>
+
+</LinearLayout>

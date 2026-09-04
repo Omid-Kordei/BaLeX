@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_settings_header"
+        android:paddingLeft="4dp">
+
+        <ImageView
+            android:id="@+id/btnProfileBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اطلاعات پروفایل"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="8dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#F5F5F5"
+                android:paddingTop="24dp"
+                android:paddingBottom="20dp">
+
+                <FrameLayout
+                    android:layout_width="96dp"
+                    android:layout_height="96dp">
+
+                    <LinearLayout
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_avatar_circle_chat">
+
+                        <TextView
+                            android:id="@+id/txtProfileBigAvatar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="؟"
+                            android:textSize="36sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imgProfileBigPhoto"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txtProfileBigName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="نام"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"/>
+
+                <TextView
+                    android:id="@+id/txtProfileBigType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="#00C853"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rowProfileUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="نام کاربری"
+                    android:textSize="11sp"
+                    android:textColor="#999999"/>
+                <TextView
+                    android:id="@+id/txtProfileUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@username"
+                    android:textSize="15sp"
+                    android:textColor="#1A1A1A"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0"/>
+
+            <LinearLayout
+                android:id="@+id/rowProfileId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="آیدی عددی"
+                    android:textSize="11sp"
+                    android:textColor="#999999"/>
+                <TextView
+                    android:id="@+id/txtProfileId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0"
+                    android:textSize="15sp"
+                    android:textColor="#1A1A1A"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0"/>
+
+            <LinearLayout
+                android:id="@+id/rowProfileBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="بیوگرافی / توضیحات"
+                    android:textSize="11sp"
+                    android:textColor="#999999"/>
+                <TextView
+                    android:id="@+id/txtProfileBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:textColor="#1A1A1A"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rowProfileMembers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="تعداد اعضا"
+                    android:textSize="11sp"
+                    android:textColor="#999999"/>
+                <TextView
+                    android:id="@+id/txtProfileMembers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textColor="#1A1A1A"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

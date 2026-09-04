@@ -1,0 +1,80 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="#F5F5F5">
+	<FrameLayout
+		android:id="@+id/frameContent"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1" />
+	<LinearLayout
+		android:id="@+id/linear3"
+		android:layout_width="match_parent"
+		android:layout_height="62dp"
+		android:paddingLeft="16dp"
+		android:paddingTop="6dp"
+		android:paddingRight="16dp"
+		android:paddingBottom="6dp"
+		android:background="@drawable/bg_footer"
+		android:orientation="horizontal"
+		android:elevation="8dp">
+		<LinearLayout
+			android:id="@+id/tabChats"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:paddingTop="6dp"
+			android:paddingBottom="6dp"
+			android:background="@drawable/bg_footer_active"
+			android:gravity="center_horizontal|center_vertical"
+			android:orientation="vertical"
+			android:layout_weight="1">
+			<ImageView
+				android:id="@+id/iconTabChats"
+				android:layout_width="22dp"
+				android:layout_height="22dp"
+				android:src="@drawable/ic_footer_chat"
+				android:scaleType="center" />
+			<TextView
+				android:id="@+id/labelTabChats"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="2dp"
+				android:text="چت‌ها"
+				android:textSize="11sp"
+				android:textStyle="bold"
+				android:textColor="#00C853" />
+		</LinearLayout>
+		<View
+			android:id="@+id/view4"
+			android:layout_width="12dp"
+			android:layout_height="match_parent" />
+		<LinearLayout
+			android:id="@+id/tabSettings"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:paddingTop="6dp"
+			android:paddingBottom="6dp"
+			android:gravity="center_horizontal|center_vertical"
+			android:orientation="vertical"
+			android:layout_weight="1">
+			<ImageView
+				android:id="@+id/iconTabSettings"
+				android:layout_width="22dp"
+				android:layout_height="22dp"
+				android:src="@drawable/ic_footer_settings"
+				android:scaleType="center" />
+			<TextView
+				android:id="@+id/labelTabSettings"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="2dp"
+				android:text="تنظیمات"
+				android:textSize="11sp"
+				android:textColor="#AAAAAA" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

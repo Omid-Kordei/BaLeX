@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F0F0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF"
+        android:paddingLeft="4dp"
+        android:paddingRight="12dp"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/btnChatBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:padding="8dp"
+            android:alpha="0.7"/>
+
+        <LinearLayout
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:background="@drawable/bg_avatar_circle_chat"
+            android:layout_marginLeft="4dp">
+
+            <TextView
+                android:id="@+id/txtChatRoomAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/txtChatRoomName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="نام کاربر"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtChatRoomStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="آنلاین"
+                android:textSize="11sp"
+                android:textColor="#00C853"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnChatMore"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_more"
+            android:padding="6dp"
+            android:alpha="0.6"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
+
+    <!-- نوار پیش‌نمایش پاسخ (ریپلای) -->
+    <LinearLayout
+        android:id="@+id/layoutReplyPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#E8E8E8"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="#00C853"/>
+
+        <TextView
+            android:id="@+id/txtReplyPreview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="#555555"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/btnCancelReply"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:gravity="center"
+            android:text="✕"
+            android:textSize="16sp"
+            android:textColor="#888888"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_input_bar"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/btnAttach"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_attach"
+            android:padding="6dp"
+            android:alpha="0.5"/>
+
+        <EditText
+            android:id="@+id/edtMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/bg_msg_input"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:hint="پیام..."
+            android:textSize="14sp"
+            android:textColor="#1A1A1A"
+            android:textColorHint="#AAAAAA"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:minLines="1"/>
+
+        <LinearLayout
+            android:id="@+id/btnSend"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:background="@drawable/bg_send_btn">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_send"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

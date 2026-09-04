@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_footer"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:elevation="8dp">
+
+    <!-- تب چت‌ها -->
+    <LinearLayout
+        android:id="@+id/tabChats"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_footer_active"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <ImageView
+            android:id="@+id/iconTabChats"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_footer_chat"/>
+
+        <TextView
+            android:id="@+id/labelTabChats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="چت‌ها"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#00C853"/>
+
+    </LinearLayout>
+
+    <!-- فاصله وسط -->
+    <View
+        android:layout_width="12dp"
+        android:layout_height="match_parent"/>
+
+    <!-- تب تنظیمات -->
+    <LinearLayout
+        android:id="@+id/tabSettings"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <ImageView
+            android:id="@+id/iconTabSettings"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_footer_settings"/>
+
+        <TextView
+            android:id="@+id/labelTabSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="تنظیمات"
+            android:textSize="11sp"
+            android:textColor="#AAAAAA"/>
+
+    </LinearLayout>
+
+</LinearLayout>
