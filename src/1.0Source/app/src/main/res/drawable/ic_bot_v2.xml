@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp" android:height="40dp"
+    android:viewportWidth="40" android:viewportHeight="40">
+
+    <!-- دکمه آنتن بالا -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M20,2m-3,0a3,3 0,1,0 6,0a3,3 0,1,0 -6,0"/>
+
+    <!-- ساقه آنتن -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M19,5h2v4h-2z"/>
+
+    <!-- بدنه اصلی ربات (گوشه‌های گرد) -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M8,11C8,8.8 9.8,7 12,7h16c2.2,0 4,1.8 4,4v14c0,2.2-1.8,4-4,4h-4.5l-3.5,5-3.5-5H12c-2.2,0-4-1.8-4-4z"/>
+
+    <!-- چشم چپ (آبی-بنفش) -->
+    <path android:fillColor="#7C4DFF"
+        android:pathData="M14,16m-3,0a3,3 0,1,0 6,0a3,3 0,1,0 -6,0"/>
+
+    <!-- برق چشم چپ -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M13,14.5m-1,0a1,1 0,1,0 2,0a1,1 0,1,0 -2,0"/>
+
+    <!-- چشم راست (آبی-بنفش) -->
+    <path android:fillColor="#7C4DFF"
+        android:pathData="M26,16m-3,0a3,3 0,1,0 6,0a3,3 0,1,0 -6,0"/>
+
+    <!-- برق چشم راست -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M25,14.5m-1,0a1,1 0,1,0 2,0a1,1 0,1,0 -2,0"/>
+
+    <!-- دهان (نوار آبی گرادیانت) -->
+    <path android:fillColor="#448AFF"
+        android:pathData="M13,23h14c0.6,0 1,0.5 1,1v1c0,0.6-0.4,1-1,1h-14c-0.6,0-1-0.4-1-1v-1c0-0.5,0.4-1,1-1z"/>
+
+</vector>

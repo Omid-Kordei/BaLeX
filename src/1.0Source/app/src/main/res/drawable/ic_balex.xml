@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp" android:height="48dp"
+    android:viewportWidth="48" android:viewportHeight="48">
+
+    <!-- مربع گرد سبز -->
+    <path android:fillColor="#00C853"
+        android:pathData="M10,0h28c5.5,0 10,4.5 10,10v28c0,5.5-4.5,10-10,10H10C4.5,48 0,43.5 0,38V10C0,4.5 4.5,0 10,0z"/>
+
+    <!-- صاعقه سفید -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M28,8L14,27h9L19,40 36,21h-9z"/>
+
+</vector>

@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp" android:height="48dp"
+    android:viewportWidth="48" android:viewportHeight="48">
+
+    <!-- بدنه ربات -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M10,14C10,11.8 11.8,10 14,10h20c2.2,0 4,1.8 4,4v14c0,2.2-1.8,4-4,4h-6l-4,5-4-5h-6c-2.2,0-4-1.8-4-4z"/>
+
+    <!-- چشم چپ -->
+    <path android:fillColor="#00C853"
+        android:pathData="M17,20m-3,0a3,3 0,1,0 6,0a3,3 0,1,0 -6,0"/>
+
+    <!-- چشم راست -->
+    <path android:fillColor="#00C853"
+        android:pathData="M31,20m-3,0a3,3 0,1,0 6,0a3,3 0,1,0 -6,0"/>
+
+    <!-- دهان -->
+    <path android:fillColor="#00C853"
+        android:pathData="M17,26h14v2h-14z"/>
+
+    <!-- آنتن -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M23,8h2v4h-2z"/>
+
+    <!-- اچار -->
+    <path android:fillColor="#00922C"
+        android:pathData="M35,4C33,4 31.4,5.2 30.8,6.8L33,9l-2,2-2.2-2.2C28.3,9.5 28,10.7 28,12c0,3.3 2.7,6 6,6 0.7,0 1.4-0.1 2-0.4L32,13.6l2.4-2.4 4,4C38.7,14.5 39,13.3 39,12c0-3.3-2.7-6-6-6"/>
+
+</vector>
